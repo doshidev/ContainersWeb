@@ -1,0 +1,326 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+  	<title>Containers: CS700B Master's Project</title>
+  	<meta name="description" content="The HTML5 Herald">
+  	<meta name="author" content="SitePoint">
+
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  	<!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  	<![endif]-->
+
+  	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+  	<style type="text/css">
+  		.timeline {
+		  list-style: none;
+		  padding: 20px 0 20px;
+		  position: relative;
+		}
+
+		.timeline:before {
+		  top: 0;
+		  bottom: 0;
+		  position: absolute;
+		  content: " ";
+		  width: 3px;
+		  background-color: #d4d4d4;
+		  left: 50%;
+		  margin-left: -1.5px;
+		}
+
+		.timeline > li {
+		  margin-bottom: 20px;
+		  position: relative;
+		}
+
+		.timeline > li:before,
+		.timeline > li:after {
+		  content: " ";
+		  display: table;
+		}
+
+		.timeline > li:after {
+		  clear: both;
+		}
+
+		.timeline > li:before,
+		.timeline > li:after {
+		  content: " ";
+		  display: table;
+		}
+
+		.timeline > li:after {
+		  clear: both;
+		}
+
+		.timeline > li > .timeline-panel {
+		  width: 46%;
+		  float: left;
+		  border: 1px solid #d4d4d4;
+		  border-radius: 2px;
+		  padding: 20px;
+		  position: relative;
+		  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+		  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+		  background-color: #fff;
+		}
+
+		.timeline > li > .timeline-panel:before {
+		  position: absolute;
+		  top: 26px;
+		  right: -15px;
+		  display: inline-block;
+		  border-top: 15px solid transparent;
+		  border-left: 15px solid #ccc;
+		  border-right: 0 solid #ccc;
+		  border-bottom: 15px solid transparent;
+		  content: " ";
+		}
+
+		.timeline > li > .timeline-panel:after {
+		  position: absolute;
+		  top: 27px;
+		  right: -14px;
+		  display: inline-block;
+		  border-top: 14px solid transparent;
+		  border-left: 14px solid #fff;
+		  border-right: 0 solid #fff;
+		  border-bottom: 14px solid transparent;
+		  content: " ";
+		}
+
+		.timeline > li > .timeline-badge {
+		  color: #fff;
+		  width: 50px;
+		  height: 50px;
+		  line-height: 50px;
+		  font-size: 1.4em;
+		  text-align: center;
+		  position: absolute;
+		  top: 16px;
+		  left: 50%;
+		  margin-left: -25px;
+		  background-color: #999999;
+		  z-index: 100;
+		  border-top-right-radius: 50%;
+		  border-top-left-radius: 50%;
+		  border-bottom-right-radius: 50%;
+		  border-bottom-left-radius: 50%;
+		}
+
+		.timeline > li.timeline-inverted > .timeline-panel {
+		  float: right;
+		}
+
+		.timeline > li.timeline-inverted > .timeline-panel:before {
+		  border-left-width: 0;
+		  border-right-width: 15px;
+		  left: -15px;
+		  right: auto;
+		}
+
+		.timeline > li.timeline-inverted > .timeline-panel:after {
+		  border-left-width: 0;
+		  border-right-width: 14px;
+		  left: -14px;
+		  right: auto;
+		}
+
+		.timeline-badge.primary {
+		  background-color: #2e6da4 !important;
+		}
+
+		.timeline-badge.success {
+		  background-color: #3f903f !important;
+		}
+
+		.timeline-badge.warning {
+		  background-color: #f0ad4e !important;
+		}
+
+		.timeline-badge.danger {
+		  background-color: #d9534f !important;
+		}
+
+		.timeline-badge.info {
+		  background-color: #5bc0de !important;
+		}
+
+		.timeline-title {
+		  margin-top: 0;
+		  color: inherit;
+		}
+
+		.timeline-body > p,
+		.timeline-body > ul {
+		  margin-bottom: 0;
+		}
+
+		.timeline-body > p + p {
+		  margin-top: 5px;
+		}
+
+  	</style>
+
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="index.html">
+			<img src="img/ddicon-256x256.jpg" style="width:50px; height: 50px;">
+			<span class="Display-4">Master's Project: Containers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+	    	<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+		  		<li class="nav-item">
+		    		<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+		  		</li>
+		  		<li class="nav-item active">
+		    		<a class="nav-link" href="project.html">Project</a>
+			  	</li>
+			  	<li class="nav-item">
+		    		<a class="nav-link" href="outcomes.html">Outcomes</a>
+		  		</li>
+		  		<li class="nav-item">
+		    		<a class="nav-link" href="kb.html">Knowledge Base</a>
+		  		</li>
+			</ul>
+			
+			<div class="form-inline my-2 my-lg-0">
+		  		<a class="text-secondary font-weight-bold" href="https://web.njit.edu/~borcea" target="_blank">Prof. Dr. Cristian Borcea</a>
+			</div>
+		</div>
+	</nav>
+
+
+	<div class="container p-4">
+		
+		<!-- Project -->
+		<div class="row mt-5">
+			<div class="col">
+				<p class="text-center h2 mb-4">Project</p>
+				<p class="text-xl-center lead">To define programming assignment(s) using containers for cloud computing and/or computer science students. In the process of defining the assignments, learn and implement the solution and evaluate its performance. Evaluation entails comparing the similar solution deployed on container and on VM.</p>
+			</div>
+		</div>
+
+		<!-- Milestone Timeline -->
+		<div class="row mt-5 jumbotron">
+			<div class="col-lg-12">
+				<div class="container">
+				  <p class="text-center h2 mb-4">Milestones</p>
+				  <ul class="timeline">
+				    <li>
+				      <div class="timeline-badge success">1</div>
+				      <div class="timeline-panel">
+				        <div class="timeline-heading">
+				          <h4 class="timeline-title">Learn</h4>
+				          <p><small class="text-muted"><i class="far fa-calendar"></i> Jan 26, 2018</small></p>
+				        </div>
+				        <div class="timeline-body">
+				          <p>What are containers? How does it work?</p>
+				          <p>How to setup development environment?</p>
+				          <p>How to deploy container applications?</p>
+				          <hr>
+				          <i class="far fa-file-alt"></i> Outcome: A document mentioning steps to deploy container application
+				        </div>
+				      </div>
+				    </li>
+				    <li class="timeline-inverted">
+				      <div class="timeline-badge">2</div>
+				      <div class="timeline-panel">
+				        <div class="timeline-heading">
+				          <h4 class="timeline-title">Define</h4>
+				          <p><small class="text-muted"><i class="far fa-calendar"></i> Feb 09, 2018</small></p>
+				        </div>
+				        <div class="timeline-body">
+				          <p>Define at least two programming assignments which can be deployed on containers</p>
+				          <hr>
+				          <i class="far fa-file-alt"></i> Outcome: 2- 3 definitions of possible programming assignment
+				        </div>
+				      </div>
+				    </li>
+				    <li>
+				      <div class="timeline-badge">3</div>
+				      <div class="timeline-panel">
+				        <div class="timeline-heading">
+				          <h4 class="timeline-title">Deply</h4>
+				          <p><small class="text-muted"><i class="far fa-calendar"></i> Mar 30, 2018</small></p>
+				        </div>
+				        <div class="timeline-body">
+				        	<p>Writing the code (implementation)</p>
+							<p>Deploying the code in all the stages of containers (development, staging area, production)</p>
+				          <hr>
+				          <i class="far fa-file-alt"></i> Outcome: Implementation of a programming solution for at least one problem defined in stage 2
+				        </div>
+				      </div>
+				    </li>
+				    <li class="timeline-inverted">
+				      <div class="timeline-badge">4</div>
+				      <div class="timeline-panel">
+				        <div class="timeline-heading">
+				          <h4 class="timeline-title">Evaluate</h4>
+				          <p><small class="text-muted"><i class="far fa-calendar"></i> Apr 13, 2018</small></p>
+				        </div>
+				        <div class="timeline-body">
+				          <p>Performance comparison between VM-based and container-based deployment of the same application</p>
+				          <hr>
+				          <i class="far fa-file-alt"></i> Outcome: Graphs comparing the performance of the solution deployed in stage 3 with comparison (Container VS. VM)
+				        </div>
+				      </div>
+				    </li>
+				    <li>
+				      <div class="timeline-badge">5</div>
+				      <div class="timeline-panel">
+				        <div class="timeline-heading">
+				          <h4 class="timeline-title">Final Solution</h4>
+				          <p><small class="text-muted"><i class="far fa-calendar"></i> Apr 27, 2018</small></p>
+				        </div>
+				        <div class="timeline-body">
+				          <p>Draft of programming assignment(s) using containers</p>
+				          <p>Final description of the assignment</p>
+				          <hr>
+				          <i class="far fa-file-alt"></i> Outcome: Document describing the programming assignment using containers along with its solution and performance evaluation
+				        </div>
+				      </div>
+				    </li>
+				    
+				  </ul>
+
+				  <p class="text-center"><a href="outcomes.html" class="btn btn-secondary btn-sm justify-content-center">View all outcomes</a></p>
+				</div>
+				
+			</div>
+		</div>
+
+		
+	</div>
+	
+
+
+	<!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; <a class="text-white" href="http://www.devangdoshi.com" target="_new">devangdoshi.com</a> 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+
+	<!-- Scripts -- >
+  	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,4 @@
+AuthUserFile /afs/cad/u/d/b/dbd24/public_html/containers/.htpasswd
+AuthType Basic
+AuthName "Containers Site"
+Require valid-user
